@@ -1,3 +1,3 @@
-# ipynbsrv-skeleton
+# ipynbsrv-client
 
-> Project skeleton for ipynbsrv Python packages.
+> Client package to communicate with an ipynbsrv setup.
