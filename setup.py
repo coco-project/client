@@ -7,5 +7,8 @@ setup(
     packages=find_packages('src'),
     package_dir={'': 'src'},
     namespace_packages=['ipynbsrv'],
-    install_requires=[],
+    install_requires=[
+        'simplejson==3.8.0',
+        'slumber==0.7.1'
+    ],
 )
