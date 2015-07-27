@@ -1,14 +1,26 @@
 from bunch import bunchify
-import slumber
+from slumber import API
 from slumber.serialize import JsonSerializer, Serializer
 
 
-class HttpClient(slumber.API):
+class HttpClient(API):
 
     """
     Client to communicate with an ipynbsrv core application's HTTP API.
 
     Using this client is the recommended method to speak with the ipynbsrv app.
+
+    Example usage:
+
+    ```
+    from ipynbsrv.client.clients import HttpClient
+
+    client = HttpClient("http://ipynbsrv.api")
+
+    containers = client.containers.get()  # get all containers
+    for container in containers:
+        client.containers(container.id).restart().post()  # restart each container
+    ```
     """
 
     def __init__(self, base_url=None, auth=None):
