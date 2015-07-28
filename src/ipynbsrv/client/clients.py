@@ -15,7 +15,7 @@ class HttpClient(API):
     ```
     from ipynbsrv.client.clients import HttpClient
 
-    client = HttpClient("http://ipynbsrv.api")
+    client = HttpClient("http://ipynbsrv.api", auth=("user", "password"))
 
     containers = client.containers.get()  # get all containers
     for container in containers:
