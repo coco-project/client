@@ -6,16 +6,16 @@ from slumber.serialize import JsonSerializer, Serializer
 class HttpClient(API):
 
     """
-    Client to communicate with an ipynbsrv core application's HTTP API.
+    Client to communicate with a coco core application's HTTP API.
 
-    Using this client is the recommended method to speak with the ipynbsrv app.
+    Using this client is the recommended method to speak with the coco app.
 
     Example usage:
 
     ```
-    from ipynbsrv.client.clients import HttpClient
+    from coco.client.clients import HttpClient
 
-    client = HttpClient("http://ipynbsrv.api", auth=("user", "password"))
+    client = HttpClient("http://coco.api", auth=("user", "password"))
 
     containers = client.containers.get()  # get all containers
     for container in containers:

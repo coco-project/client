@@ -1,14 +1,14 @@
-# ipynbsrv-client
+# coco-client
 
-> Client package to communicate with the ipynbsrv core API.
+> Client package to communicate with the coco core API.
 
 ## Usage
 
 ```python
-from ipynbsrv.client.clients import HttpClient
+from coco.client.clients import HttpClient
 
 # initialize the client
-client = HttpClient("http://ipynbsrv.api", auth=("user", "password"))
+client = HttpClient("http://coco.api", auth=("user", "password"))
 
 # work on existing resources
 containers = client.containers.get()
